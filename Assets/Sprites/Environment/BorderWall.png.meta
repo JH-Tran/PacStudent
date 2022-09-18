@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dac41c76fa85c8a49bf4a85c7965d67b
+guid: ef8800c7041edfc48a2572d6d0d5f649
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OutsideBorder_0
+      name: BorderWall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a573820eb334434399c79342e633527
+      internalID: -462674875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1b53066dce52d4db838d56c6226872
+      internalID: -528914078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eafced852945634ebc359df2d29f0b9
+      internalID: -2112639335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_3
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +183,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdbe325a51d351e47ba7c920e84a2899
-      internalID: -1390312412
+      spriteID: cf958280323f89641823970cdf5f2a6d
+      internalID: 1159100743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutsideBorder_1
+      name: BorderWall_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc021d734d2b5f3488c55cd9f91b3771
+      internalID: -1151861132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559a5ea43ab08724bb64a20462239392
+      internalID: -546329061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_6
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +246,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6fe29aacc9c24a45a3843016fcff60a
-      internalID: 694770471
+      spriteID: 68fba68982f117448b3f0f045d4487ce
+      internalID: 1839578315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BorderWall_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c81bda931d5eb544b78fef73786c822
+      internalID: -98572460
       vertices: []
       indices: 
       edges: []
@@ -158,8 +284,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OutsideBorder_0: -1390312412
-      OutsideBorder_1: 694770471
+      BorderWall_0: -462674875
+      BorderWall_3: 1159100743
+      BorderWall_2: -2112639335
+      BorderWall_4: -1151861132
+      BorderWall_7: -98572460
+      BorderWall_1: -528914078
+      BorderWall_6: 1839578315
+      BorderWall_5: -546329061
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
