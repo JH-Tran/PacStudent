@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
 guid: fd6b5da60a3b7dc42a3782322940991d
+========
+guid: b5b839d38568407429e96a0c5c5b07e1
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,7 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
       name: InsideBorder_0
+========
+      name: OutsideBorder_0
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +128,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
       spriteID: 831db631e461fc64b9219e8c3056b9a6
       internalID: 2028667842
+========
+      spriteID: 264aec57a828a644c9d3edb55cbdf8f9
+      internalID: -1598247687
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
       name: InsideBorder_1
+========
+      name: OutsideBorder_1
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
       spriteID: 31c429ee38408fe4582386b75201f51c
       internalID: 1116035528
+========
+      spriteID: 75cd0077dffdae546ae2c8dbae1ec12b
+      internalID: -301711438
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
       vertices: []
       indices: 
       edges: []
@@ -158,8 +180,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Sprites/Environment/InsideBorder.png.meta
       InsideBorder_0: 2028667842
       InsideBorder_1: 1116035528
+========
+      OutsideBorder_0: -1598247687
+      OutsideBorder_1: -301711438
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/OutsideBorder.png.meta
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

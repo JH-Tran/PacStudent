@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
 guid: ad65bb765e2724544bbb5dc804b912ba
+========
+guid: d4cff0a265dcae1458985de0958c0ae0
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,10 +110,17 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
       name: PowerPellet_0
       rect:
         serializedVersion: 2
         x: 28
+========
+      name: InsideBorder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
         y: 128
         width: 76
         height: 120
@@ -120,13 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
       spriteID: 5186df8111f38134ea37c5bf107de8b6
       internalID: 32044631
+========
+      spriteID: 8b67783e4ed641e4f86744f5acf21bb5
+      internalID: 2034286701
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
       name: PowerPellet_1
       rect:
         serializedVersion: 2
@@ -170,6 +187,9 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: PowerPellet_5
+========
+      name: InsideBorder_1
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
       rect:
         serializedVersion: 2
         x: 28
@@ -183,6 +203,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
       spriteID: 20c29105863f9464992068c52a668299
       internalID: 1199394837
       vertices: []
@@ -206,6 +227,10 @@ TextureImporter:
       bones: []
       spriteID: 6fcba304f6883a8499efe30ac7f98e73
       internalID: 1796418440
+========
+      spriteID: b12717ba21cc1934fb04ce71b41eeb64
+      internalID: -69889003
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
       vertices: []
       indices: 
       edges: []
@@ -221,11 +246,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Sprites/UserInterface/PowerPellet.png.meta
       PowerPellet_4: -1896076858
       PowerPellet_0: 32044631
       PowerPellet_1: 489399171
       PowerPellet_5: 1199394837
       PowerPellet_6: 1796418440
+========
+      InsideBorder_0: 2034286701
+      InsideBorder_1: -69889003
+>>>>>>>> Manual-Level-Layout:Assets/Sprites/Environment/InsideBorder.png.meta
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
