@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 086555990e1c8a94da8f2dd4ca9abff9
+guid: 04cb70d30f42ce449ae9035d33d3a071
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,64 +106,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PacmanUp_0
+      name: GhostScared_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 24
         y: 128
-        width: 88
+        width: 84
         height: 124
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da8a98fefa464b41b5c5e830fc1a415
-      internalID: -1399059199
+      spriteID: a0fe0f66878ca1e4cacb454bda544823
+      internalID: -269720021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanUp_1
+      name: GhostScared_1
       rect:
         serializedVersion: 2
-        x: 148
-        y: 128
-        width: 88
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b4f1cdae8dafab418588960d83b6ae6
-      internalID: -987947298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PacmanUp_2
-      rect:
-        serializedVersion: 2
-        x: 20
+        x: 24
         y: 0
-        width: 88
-        height: 124
+        width: 84
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29ae3a6ea1b60224e8cc6896a6070bcd
-      internalID: 1007811660
+      spriteID: 65c1f86fd11df7e45914b12fd6b0d80f
+      internalID: 1878799783
       vertices: []
       indices: 
       edges: []
@@ -179,9 +158,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PacmanUp_1: -987947298
-      PacmanUp_2: 1007811660
-      PacmanUp_0: -1399059199
+      GhostScared_0: -269720021
+      GhostScared_1: 1878799783
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
