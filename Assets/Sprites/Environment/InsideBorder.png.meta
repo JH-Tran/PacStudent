@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef8800c7041edfc48a2572d6d0d5f649
+guid: d4cff0a265dcae1458985de0958c0ae0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,70 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BorderWall_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a573820eb334434399c79342e633527
-      internalID: -462674875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f1b53066dce52d4db838d56c6226872
-      internalID: -528914078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_2
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8eafced852945634ebc359df2d29f0b9
-      internalID: -2112639335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_3
+      name: InsideBorder_0
       rect:
         serializedVersion: 2
         x: 0
@@ -183,56 +120,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf958280323f89641823970cdf5f2a6d
-      internalID: 1159100743
+      spriteID: 8b67783e4ed641e4f86744f5acf21bb5
+      internalID: 2034286701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BorderWall_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc021d734d2b5f3488c55cd9f91b3771
-      internalID: -1151861132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 559a5ea43ab08724bb64a20462239392
-      internalID: -546329061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_6
+      name: InsideBorder_1
       rect:
         serializedVersion: 2
         x: 0
@@ -246,29 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68fba68982f117448b3f0f045d4487ce
-      internalID: 1839578315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BorderWall_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c81bda931d5eb544b78fef73786c822
-      internalID: -98572460
+      spriteID: b12717ba21cc1934fb04ce71b41eeb64
+      internalID: -69889003
       vertices: []
       indices: 
       edges: []
@@ -284,14 +158,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BorderWall_0: -462674875
-      BorderWall_3: 1159100743
-      BorderWall_2: -2112639335
-      BorderWall_4: -1151861132
-      BorderWall_7: -98572460
-      BorderWall_1: -528914078
-      BorderWall_6: 1839578315
-      BorderWall_5: -546329061
+      InsideBorder_0: 2034286701
+      InsideBorder_1: -69889003
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
