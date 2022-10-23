@@ -13,4 +13,8 @@ public class ButtonManager : MonoBehaviour
     {
         Debug.Log("NOT FOUND");
     }
+    public void ExitLevel()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField]  private GameObject player;
+    [SerializeField] private GameObject player;
     [SerializeField] private Transform[] playerPosition;
     [SerializeField] private PlayerMovement playerMoveScript;
 
     void Start()
     {
-        
+        player = gameObject;
     }
 
     void Update()
