@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerMovement : MonoBehaviour
+public class PacStudentController : MonoBehaviour
 {
     [SerializeField] AudioClip emptyMove;
     [SerializeField] AudioClip pelletMove;

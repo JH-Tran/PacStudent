@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string currentInput = "";
     [SerializeField] private string lastInput = "";
     [SerializeField] private GameObject player;
-    [SerializeField] private PlayerMovement playerMoveScript;
+    [SerializeField] private PacStudentController playerMoveScript;
 
     private RaycastHit2D raycastLeftHit, raycastRightHit, raycastUpHit, raycastDownHit;
     private bool hitWall;
