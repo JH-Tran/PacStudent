@@ -3271,6 +3271,7 @@ GameObject:
   - component: {fileID: 358688977}
   - component: {fileID: 358688978}
   - component: {fileID: 358688981}
+  - component: {fileID: 358688986}
   - component: {fileID: 358688980}
   - component: {fileID: 358688982}
   - component: {fileID: 358688983}
@@ -3495,8 +3496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyMove: {fileID: 8300000, guid: f218f62f765939f4e8dcd88b837c8a5f, type: 3}
-  pelletMove: {fileID: 8300000, guid: f04d4d267c8e54f45a78b716820d5de9, type: 3}
-  wallMove: {fileID: 8300000, guid: 74fdaeb376cf3ee4cab2e32eca7bfa06, type: 3}
+  pelletMove: {fileID: 8300000, guid: 5e7f106e2324ef74397c0444cb0710ce, type: 3}
+  wallMove: {fileID: 8300000, guid: 0477b81a2b4335042a1c514ab46cde61, type: 3}
   dustParticle: {fileID: 0}
   isLerping: 0
 --- !u!61 &358688982
@@ -8336,6 +8337,22 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &358688986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358688974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae264c22951ec746ab851ae80a44a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
+  emptyWalkAudio: {fileID: 0}
+  pelletWalkAudio: {fileID: 0}
+  wallHitAudio: {fileID: 0}
 --- !u!1001 &360368526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14817,7 +14834,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -15636,6 +15653,12 @@ MonoBehaviour:
   cam: {fileID: 718267385}
   cherry: {fileID: 7569897289520025041, guid: 45416546b81181247a9afd00a309be57, type: 3}
   originObject: {fileID: 1041049262}
+  randomPosition: {x: 0, y: 0, z: 0}
+  horizontalMin: 0
+  horizontalMax: 0
+  verticalMin: 0
+  verticalMax: 0
+  sideNum: 0
 --- !u!4 &726004560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7018504047872889829, guid: 522c207683e08234e885dc34cd2aaaa8, type: 3}
@@ -22357,10 +22380,10 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 100
+  m_ExtrusionFactor: 0.00001
   m_UseDelaunayMesh: 0
 --- !u!1001 &1340502936
 PrefabInstance:

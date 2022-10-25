@@ -10,9 +10,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] private PacStudentController playerMoveScript;
 
     private RaycastHit2D raycastLeftHit, raycastRightHit, raycastUpHit, raycastDownHit;
-    private bool hitWall;
     private float timeTaken = .5f;
-    private bool hitWallAudio = false;
+    private bool hitWallAudio = true;
 
     void Start()
     {
@@ -41,10 +40,10 @@ public class InputManager : MonoBehaviour
         // Direction change of player
         if (lastInput != null && !playerMoveScript.isLerping && currentInput != lastInput)
         {
-            raycastHitWall(lastInput);
-            if (!hitWall)
+            if (!raycastHitWall(lastInput))
             {
                 currentInput = lastInput;
+                playerMoveScript.emptyWalkAudio();
                 hitWallAudio = false;
             }
             else
@@ -59,8 +58,7 @@ public class InputManager : MonoBehaviour
         // Player continues to moves if there is no lerp, collision,
         if (currentInput != null && !playerMoveScript.isLerping)
         {
-            raycastHitWall(currentInput);
-            if (!hitWall)
+            if (!raycastHitWall(currentInput))
             {
                 movePlayer();
                 hitWallAudio = false;
@@ -68,6 +66,11 @@ public class InputManager : MonoBehaviour
             else
             {
                 if (hitWallAudio == false && lastInput.Equals(currentInput))
+                {
+                    playerMoveScript.hitWallAudio();
+                    hitWallAudio = true;
+                }
+                else if (hitWallAudio == false && !lastInput.Equals(currentInput) && raycastHitWall(lastInput) && raycastHitWall(currentInput))
                 {
                     playerMoveScript.hitWallAudio();
                     hitWallAudio = true;
@@ -95,33 +98,33 @@ public class InputManager : MonoBehaviour
             playerMoveScript.AddTween(player.transform, player.transform.position, new Vector3(player.transform.position.x + 1, player.transform.position.y), timeTaken);
         }
     }
-    private void raycastHitWall(string input)
+    private bool raycastHitWall(string input)
     {
         if (input.Equals("W"))
         {
             raycastUpHit = Physics2D.Raycast(transform.position, Vector2.up);
-            hitWall = playerMoveScript.isRaycastHit(raycastUpHit);
             Debug.DrawRay(transform.position, Vector2.up);
+            return playerMoveScript.isRaycastHit(raycastUpHit);
         }
         else if (input.Equals("A"))
         {
             raycastLeftHit = Physics2D.Raycast(transform.position, -Vector2.right);
-            hitWall = playerMoveScript.isRaycastHit(raycastLeftHit);
             Debug.DrawRay(transform.position, -Vector2.right);
+            return playerMoveScript.isRaycastHit(raycastLeftHit);
         }
         else if (input.Equals("S"))
         {
             raycastDownHit = Physics2D.Raycast(transform.position, -Vector2.up);
-            hitWall = playerMoveScript.isRaycastHit(raycastDownHit);
             Debug.DrawRay(transform.position, -Vector2.up);
+            return playerMoveScript.isRaycastHit(raycastDownHit);
         }
         else if (input.Equals("D"))
         {
             raycastRightHit = Physics2D.Raycast(transform.position, Vector2.right);
-            hitWall = playerMoveScript.isRaycastHit(raycastRightHit);
             Debug.DrawRay(transform.position, Vector2.right);
+            return playerMoveScript.isRaycastHit(raycastRightHit);
         }
-
+        return true;
     }
 
 }

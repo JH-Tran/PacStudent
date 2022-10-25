@@ -89,6 +89,11 @@ public class PacStudentController : MonoBehaviour
             StartCoroutine(audioWait());
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "Cherry")
+        {
+            
+        }
     }
 
     IEnumerator audioWait()
@@ -105,7 +110,12 @@ public class PacStudentController : MonoBehaviour
         StartCoroutine(audioWait());
     }
 
-    public bool isRaycastHit(RaycastHit2D ray)
+    public void emptyWalkAudio()
+    {
+        playerSound.Play();
+    }
+
+        public bool isRaycastHit(RaycastHit2D ray)
     {
         //Raycast collision with wall
         if (ray.collider != null)

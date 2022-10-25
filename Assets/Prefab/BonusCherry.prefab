@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7569897289520025040}
   - component: {fileID: 2554246058894939918}
   - component: {fileID: 4715412090872485205}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BonusCherry
-  m_TagString: Untagged
+  m_TagString: Cherry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
