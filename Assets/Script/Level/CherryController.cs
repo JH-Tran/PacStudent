@@ -29,10 +29,6 @@ public class CherryController : MonoBehaviour
         {
             originPosition = originObject.transform.position;
         }
-/*        Debug.Log("hMax: " + horizontalMax);
-        Debug.Log("hMin: " + horizontalMin);
-        Debug.Log("vMax: " + verticalMax);
-        Debug.Log("vMin: " + verticalMin);*/
         InvokeRepeating("spawnCherry", spawnTime, spawnTime);
     }
 
@@ -44,19 +40,15 @@ public class CherryController : MonoBehaviour
         switch (sideNum)
         {
             case 0:
-                Debug.Log("Top");
                 randomPosition = originPosition + new Vector3(Random.Range(horizontalMin, horizontalMax), verticalMax, 0f);
                 break;
             case 1:
-                Debug.Log("Left");
                 randomPosition = originPosition + new Vector3(horizontalMax, Random.Range(verticalMin, horizontalMax), 0f);
                 break;
             case 2:
-                Debug.Log("Bottom");
                 randomPosition = originPosition + new Vector3(Random.Range(horizontalMin, horizontalMax), verticalMin, 0f);
                 break;
             case 3:
-                Debug.Log("Right");
                 randomPosition = originPosition + new Vector3(horizontalMin, Random.Range(verticalMin, horizontalMax), 0f);
                 break;
         }

@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
     private RaycastHit2D raycastLeftHit, raycastRightHit, raycastUpHit, raycastDownHit;
     private float timeTaken = .5f;
     private bool hitWallAudio = true;
+    private int angleWall;
+    private bool isVertical;
 
     void Start()
     {
@@ -50,7 +52,7 @@ public class InputManager : MonoBehaviour
             {
                 if (hitWallAudio == false && lastInput.Equals(currentInput))
                 {
-                    playerMoveScript.hitWallAudio();
+                    playerMoveScript.hitWallAudio(angleWall, isVertical);
                     hitWallAudio = true;
                 }
             }
@@ -67,12 +69,12 @@ public class InputManager : MonoBehaviour
             {
                 if (hitWallAudio == false && lastInput.Equals(currentInput))
                 {
-                    playerMoveScript.hitWallAudio();
+                    playerMoveScript.hitWallAudio(angleWall, isVertical);
                     hitWallAudio = true;
                 }
                 else if (hitWallAudio == false && !lastInput.Equals(currentInput) && raycastHitWall(lastInput) && raycastHitWall(currentInput))
                 {
-                    playerMoveScript.hitWallAudio();
+                    playerMoveScript.hitWallAudio(angleWall, isVertical);
                     hitWallAudio = true;
                 }
             }
@@ -104,24 +106,32 @@ public class InputManager : MonoBehaviour
         {
             raycastUpHit = Physics2D.Raycast(transform.position, Vector2.up);
             Debug.DrawRay(transform.position, Vector2.up);
+            angleWall = 90;
+            isVertical = true;
             return playerMoveScript.isRaycastHit(raycastUpHit);
         }
         else if (input.Equals("A"))
         {
             raycastLeftHit = Physics2D.Raycast(transform.position, -Vector2.right);
             Debug.DrawRay(transform.position, -Vector2.right);
+            angleWall = 90;
+            isVertical = false;
             return playerMoveScript.isRaycastHit(raycastLeftHit);
         }
         else if (input.Equals("S"))
         {
             raycastDownHit = Physics2D.Raycast(transform.position, -Vector2.up);
             Debug.DrawRay(transform.position, -Vector2.up);
+            angleWall = 270;
+            isVertical = true;
             return playerMoveScript.isRaycastHit(raycastDownHit);
         }
         else if (input.Equals("D"))
         {
             raycastRightHit = Physics2D.Raycast(transform.position, Vector2.right);
             Debug.DrawRay(transform.position, Vector2.right);
+            angleWall = 270;
+            isVertical = false;
             return playerMoveScript.isRaycastHit(raycastRightHit);
         }
         return true;

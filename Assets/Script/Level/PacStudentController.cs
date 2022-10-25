@@ -9,6 +9,7 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] AudioClip pelletMove;
     [SerializeField] AudioClip wallMove;
     [SerializeField] ParticleSystem dustParticle;
+    [SerializeField] ParticleSystem wallDustParticle;
 
     private Tween activeTween;
     private Animator playerAnimator;
@@ -23,7 +24,6 @@ public class PacStudentController : MonoBehaviour
     {
         playerAnimator = gameObject.GetComponent<Animator>();
         playerSound = gameObject.GetComponent<AudioSource>();
-        dustParticle = gameObject.GetComponent<ParticleSystem>();
     }
     public void AddTween(Transform targetObject, Vector3 startPos, Vector3 endPos, float duration)
     {
@@ -102,8 +102,18 @@ public class PacStudentController : MonoBehaviour
         playerSound.clip = emptyMove;
     }
 
-    public void hitWallAudio()
+    public void hitWallAudio(int angle, bool isVertical)
     {
+        Debug.Log(angle);
+        if(isVertical)
+        {
+            wallDustParticle.gameObject.transform.rotation = Quaternion.Euler(angle, 0, 0);
+        }
+        else
+        {
+            wallDustParticle.gameObject.transform.rotation = Quaternion.Euler(0, angle, 0);
+        }
+        wallDustParticle.Play();
         playerSound.clip = wallMove;
         playerSound.Play();
         isAudioPlayed = true;

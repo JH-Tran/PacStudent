@@ -22,7 +22,6 @@ public class BonusCherryMovement : MonoBehaviour
         cherryController = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CherryController>();
         cameraPosition = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
         origin = GameObject.Find("Centre");
-        Debug.Log("Origin Position: " + origin.transform.position);
         startPosition = cherryController.randomPosition;
 
         gradient = (origin.transform.position.y - startPosition.y) / (origin.transform.position.x - startPosition.x);
