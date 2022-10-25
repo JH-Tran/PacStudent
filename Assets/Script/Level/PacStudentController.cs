@@ -37,7 +37,7 @@ public class PacStudentController : MonoBehaviour
         {
             timeTaken += Time.deltaTime;
             isLerping = true;
-            activeTween.Target.position = Vector3.Lerp(activeTween.StartPos, activeTween.EndPos, Mathf.Pow((timeTaken / activeTween.Duration), 3));
+            activeTween.Target.position = Vector3.Lerp(activeTween.StartPos, activeTween.EndPos, Mathf.Pow(timeTaken / activeTween.Duration, 3));
             playerAnimator.enabled = true;
             if (activeTween.EndPos.y > activeTween.Target.position.y)
             {
