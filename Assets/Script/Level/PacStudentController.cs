@@ -10,12 +10,16 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] AudioClip wallMove;
     [SerializeField] ParticleSystem dustParticle;
     [SerializeField] ParticleSystem wallDustParticle;
+    [SerializeField] ScoreManager scoreManager;
+    [SerializeField] Transform TeleporterL;
+    [SerializeField] Transform TeleporterR;
 
     private Tween activeTween;
     private Animator playerAnimator;
     private AudioSource playerSound;
     private float timeTaken;
     private bool isAudioPlayed = false;
+    private bool canTeleport = false;
 
     public bool isLerping = false;
 
@@ -68,6 +72,7 @@ public class PacStudentController : MonoBehaviour
             playerSound.Stop();
             isLerping = false;
             activeTween = null;
+            canTeleport = true;
             if (isAudioPlayed == false)
             {
                 playerSound.Play();
@@ -83,6 +88,7 @@ public class PacStudentController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pellets")
         {
+            scoreManager.addScore(10);
             playerSound.clip = pelletMove;
             playerSound.Play();
             isAudioPlayed = true;
@@ -90,9 +96,29 @@ public class PacStudentController : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.tag == "Cherry")
+        if (collision.gameObject.tag == "Cherrys")
         {
-            
+            scoreManager.addScore(100);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Teleporters")
+        {
+            Debug.Log("Trigger");
+            if (collision.name.Equals("TeleporterL") && canTeleport == true)
+            {
+                canTeleport = false;
+                activeTween = null;
+                gameObject.transform.position = TeleporterR.position;
+                AddTween(gameObject.transform,gameObject.transform.position, new Vector3(TeleporterR.position.x - 1, TeleporterR.position.y), .5f);
+            }
+            else if (collision.name.Equals("TeleporterR") && canTeleport == true)
+            {
+                canTeleport = false;
+                activeTween = null;
+                gameObject.transform.position = TeleporterL.position;
+                AddTween(gameObject.transform, gameObject.transform.position, new Vector3(TeleporterL.position.x + 1, TeleporterL.position.y), .5f);
+            }
         }
     }
 

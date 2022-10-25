@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Walls
   - Pellets
+  - Cherrys
+  - Teleporters
+  - PowerPellets
   layers:
   - Default
   - TransparentFX
