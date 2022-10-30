@@ -7,30 +7,28 @@ public class CountDownManager : MonoBehaviour
 {
     [SerializeField] Text countdownText;
 
-    private float timer = 4;
-
     private void Awake()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
+        StartCoroutine("countdownEnumertator");
     }
 
-    private void Update()
+    IEnumerator countdownEnumertator()
     {
-        timer -= Time.fixedUnscaledDeltaTime;
-        if (timer < 4 && timer > 3)
-            countdownText.text = "3";
-        else if (timer < 3 && timer > 2)
-            countdownText.text = "2";
-        else if (timer < 2 && timer > 1)
-            countdownText.text = "1";
-        else if (timer < 1 && timer > 0)
-        {
-            countdownText.text = "GO";
-        }
-        else
-        {
-            Time.timeScale = 1;
-            Destroy(gameObject);
-        }
+        countdownText.text = "3";
+        Debug.Log(3);
+        yield return new WaitForSecondsRealtime(1);
+        countdownText.text = "2";
+        Debug.Log(2);
+        yield return new WaitForSecondsRealtime(1);
+        countdownText.text = "1";
+        Debug.Log(1);
+        yield return new WaitForSecondsRealtime(1);
+        countdownText.text = "GO";
+        Debug.Log(1);
+        yield return new WaitForSecondsRealtime(1);
+        Debug.Log('G');
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
     }
 }

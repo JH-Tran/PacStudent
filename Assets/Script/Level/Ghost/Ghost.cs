@@ -62,7 +62,6 @@ public class Ghost : MonoBehaviour
         }
         else if (collision.tag.Equals("Player") && (powerPillsManager.getGhostScaredTimer() <= 0f) && (ghostDied == false))
         {
-            collision.GetComponent<PacStudentController>().resetPlayer();
             collision.GetComponent<PacStudentLives>().playerLoseLife();
         }
     }

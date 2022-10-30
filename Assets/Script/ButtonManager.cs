@@ -7,6 +7,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void Level1Load()
     {
+        Time.timeScale = 1;
         SceneManager.LoadSceneAsync(1);
     }
     public void Level2Load()
@@ -15,6 +16,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void ExitLevel()
     {
+        Time.timeScale = 1;
         SceneManager.LoadSceneAsync(0);
     }
 }

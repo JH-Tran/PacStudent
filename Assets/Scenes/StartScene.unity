@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 1001271168}
   - component: {fileID: 1001271167}
   - component: {fileID: 1001271171}
+  - component: {fileID: 1001271174}
   - component: {fileID: 1001271172}
   - component: {fileID: 1001271173}
   m_Layer: 5
@@ -1148,6 +1149,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1001271174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001271166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586c3832626020f46b8e5c0f9e843060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreText: {fileID: 1992988857}
+  bestTimeTakenText: {fileID: 93502960}
 --- !u!1 &1102058438
 GameObject:
   m_ObjectHideFlags: 0

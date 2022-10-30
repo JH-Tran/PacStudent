@@ -6,14 +6,25 @@ using UnityEngine.UI;
 public class PacStudentLives : MonoBehaviour
 {
     [SerializeField] Image lifeImage1, lifeImage2, lifeImage3;
-    [SerializeField] GameObject respawnObject;
-
+    [SerializeField] GameObject pelletsParent;
+    [SerializeField] GameOverManager gameOverManager;
+    private InputManager inputManager;
+    
     private GameObject player;
     private int lives = 3;
 
     void Start()
     {
+        inputManager = GetComponent<InputManager>();
         player = gameObject;
+    }
+
+    private void FixedUpdate()
+    {
+        if (pelletsParent.transform.childCount == 0)
+        {
+            playerGameOver();
+        }
     }
 
     public void playerLoseLife()
@@ -42,11 +53,11 @@ public class PacStudentLives : MonoBehaviour
 
     private void playerReset()
     {
-        player.transform.position = respawnObject.transform.position;
+        inputManager.resetPlayer();
     }
 
     private void playerGameOver()
     {
-
+        gameOverManager.gameOverTigger();
     }
 }

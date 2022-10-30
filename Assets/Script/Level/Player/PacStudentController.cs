@@ -15,7 +15,6 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] Transform TeleporterR;
     [SerializeField] PowerPillsManager powerPillsScript;
 
-    private GameObject playerRespawn;
     private Tween activeTween;
     private Animator playerAnimator;
     private AudioSource playerSound;
@@ -27,7 +26,7 @@ public class PacStudentController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerRespawn = GameObject.Find("PlayerRespawn");
+        
         playerAnimator = gameObject.GetComponent<Animator>();
         playerSound = gameObject.GetComponent<AudioSource>();
     }
@@ -112,7 +111,6 @@ public class PacStudentController : MonoBehaviour
 
         if (collision.gameObject.tag == "Teleporters")
         {
-            Debug.Log("Trigger");
             if (collision.name.Equals("TeleporterL") && canTeleport == true)
             {
                 canTeleport = false;
@@ -138,7 +136,6 @@ public class PacStudentController : MonoBehaviour
 
     public void hitWallAudio(int angle, bool isVertical)
     {
-        Debug.Log(angle);
         if(isVertical)
         {
             wallDustParticle.gameObject.transform.rotation = Quaternion.Euler(angle, 0, 0);
@@ -187,7 +184,5 @@ public class PacStudentController : MonoBehaviour
     public void resetPlayer()
     {
         activeTween = null;
-        gameObject.transform.position = gameObject.transform.position;
-        AddTween(gameObject.transform, gameObject.transform.position, new Vector3(playerRespawn.transform.position.x, playerRespawn.transform.position.y), .01f);
     }
 }

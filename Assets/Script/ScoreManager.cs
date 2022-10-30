@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] Text timeTakenText;
 
     private bool isTimeTicking = true;
-    private float gameTimeTaken = 0.0f;
+    private float gameTimeTaken = -0.02f;
     private int gameScore = 0;
 
     void FixedUpdate()
@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
     public void timeToText()
     {
         TimeSpan timeSpan = TimeSpan.FromSeconds(gameTimeTaken);
-        string timeString = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+        string timeString = timeSpan.ToString("mm\\:ss\\:ff");
         timeTakenText.text = timeString;
     }
     public void toggleTime()
@@ -39,5 +39,14 @@ public class ScoreManager : MonoBehaviour
             isTimeTicking = false;
         else
             isTimeTicking = true;
+    }
+
+    public int getScore()
+    {
+        return gameScore;
+    }
+    public float getTime()
+    {
+        return gameTimeTaken;
     }
 }

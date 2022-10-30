@@ -8,7 +8,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string lastInput = "";
     [SerializeField] private GameObject player;
     [SerializeField] private PacStudentController playerMoveScript;
+    [SerializeField] private GameObject playerDeathParticle;
 
+    private GameObject playerRespawn;
     private RaycastHit2D raycastLeftHit, raycastRightHit, raycastUpHit, raycastDownHit;
     private float timeTaken = .5f;
     private bool hitWallAudio = true;
@@ -17,6 +19,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+        playerRespawn = GameObject.Find("PlayerRespawn");
         player = gameObject;
     }
 
@@ -105,7 +108,6 @@ public class InputManager : MonoBehaviour
         if (input.Equals("W"))
         {
             raycastUpHit = Physics2D.Raycast(transform.position, Vector2.up);
-            Debug.DrawRay(transform.position, Vector2.up);
             angleWall = 90;
             isVertical = true;
             return playerMoveScript.isRaycastHit(raycastUpHit);
@@ -113,7 +115,6 @@ public class InputManager : MonoBehaviour
         else if (input.Equals("A"))
         {
             raycastLeftHit = Physics2D.Raycast(transform.position, -Vector2.right);
-            Debug.DrawRay(transform.position, -Vector2.right);
             angleWall = 90;
             isVertical = false;
             return playerMoveScript.isRaycastHit(raycastLeftHit);
@@ -121,7 +122,6 @@ public class InputManager : MonoBehaviour
         else if (input.Equals("S"))
         {
             raycastDownHit = Physics2D.Raycast(transform.position, -Vector2.up);
-            Debug.DrawRay(transform.position, -Vector2.up);
             angleWall = 270;
             isVertical = true;
             return playerMoveScript.isRaycastHit(raycastDownHit);
@@ -129,7 +129,6 @@ public class InputManager : MonoBehaviour
         else if (input.Equals("D"))
         {
             raycastRightHit = Physics2D.Raycast(transform.position, Vector2.right);
-            Debug.DrawRay(transform.position, Vector2.right);
             angleWall = 270;
             isVertical = false;
             return playerMoveScript.isRaycastHit(raycastRightHit);
@@ -137,4 +136,13 @@ public class InputManager : MonoBehaviour
         return true;
     }
 
+    public void resetPlayer()
+    {
+        Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);
+        playerMoveScript.resetPlayer();
+        gameObject.transform.position = gameObject.transform.position;
+        currentInput = null;
+        lastInput = null;
+        playerMoveScript.AddTween(gameObject.transform, gameObject.transform.position, new Vector3(playerRespawn.transform.position.x, playerRespawn.transform.position.y), .01f);
+    }
 }
