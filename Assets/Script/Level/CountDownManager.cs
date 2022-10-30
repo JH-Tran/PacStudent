@@ -16,18 +16,13 @@ public class CountDownManager : MonoBehaviour
     IEnumerator countdownEnumertator()
     {
         countdownText.text = "3";
-        Debug.Log(3);
         yield return new WaitForSecondsRealtime(1);
         countdownText.text = "2";
-        Debug.Log(2);
         yield return new WaitForSecondsRealtime(1);
         countdownText.text = "1";
-        Debug.Log(1);
         yield return new WaitForSecondsRealtime(1);
         countdownText.text = "GO";
-        Debug.Log(1);
         yield return new WaitForSecondsRealtime(1);
-        Debug.Log('G');
         Time.timeScale = 1;
         gameObject.SetActive(false);
     }
