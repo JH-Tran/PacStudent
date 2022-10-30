@@ -13,19 +13,21 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] ScoreManager scoreManager;
     [SerializeField] Transform TeleporterL;
     [SerializeField] Transform TeleporterR;
+    [SerializeField] PowerPillsManager powerPillsScript;
 
+    private GameObject playerRespawn;
     private Tween activeTween;
     private Animator playerAnimator;
     private AudioSource playerSound;
     private float timeTaken;
     private bool isAudioPlayed = false;
     private bool canTeleport = false;
-
     public bool isLerping = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerRespawn = GameObject.Find("PlayerRespawn");
         playerAnimator = gameObject.GetComponent<Animator>();
         playerSound = gameObject.GetComponent<AudioSource>();
     }
@@ -88,7 +90,7 @@ public class PacStudentController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pellets")
         {
-            scoreManager.addScore(10);
+            addPlayerScore(10);
             playerSound.clip = pelletMove;
             playerSound.Play();
             isAudioPlayed = true;
@@ -98,7 +100,13 @@ public class PacStudentController : MonoBehaviour
 
         if (collision.gameObject.tag == "Cherrys")
         {
-            scoreManager.addScore(100);
+            addPlayerScore(100);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "PowerPills")
+        {
+            powerPillsScript.addGhostScaredTimer();
             Destroy(collision.gameObject);
         }
 
@@ -151,7 +159,7 @@ public class PacStudentController : MonoBehaviour
         playerSound.Play();
     }
 
-        public bool isRaycastHit(RaycastHit2D ray)
+    public bool isRaycastHit(RaycastHit2D ray)
     {
         //Raycast collision with wall
         if (ray.collider != null)
@@ -169,5 +177,17 @@ public class PacStudentController : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void addPlayerScore(int score)
+    {
+        scoreManager.addScore(score);
+    }
+    
+    public void resetPlayer()
+    {
+        activeTween = null;
+        gameObject.transform.position = gameObject.transform.position;
+        AddTween(gameObject.transform, gameObject.transform.position, new Vector3(playerRespawn.transform.position.x, playerRespawn.transform.position.y), .01f);
     }
 }
